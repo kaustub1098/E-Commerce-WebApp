@@ -1,12 +1,13 @@
+Create DataBase in PostgresSQL named "EcommerceStoreDb"
+
+
 json-server --watch cartProducts.json  //run in CMD with NgServe and Eclipse running.
 
 
 //DATA TO BE POSTED VIA POSTMAN INTO PRODUCT CONTROLLER.
 
 
-
-
- {
+{
         "id": 117,
         "product_name": "Samsung Galaxy Z Flip4 5G",
         "product_description": "Galaxy Z Fold4's Cover Screen size is 15.73cm 6.2 in the full rectangle and 15.48cm 6.1 accounting for the rounded corners.",
