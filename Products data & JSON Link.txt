@@ -1,0 +1,177 @@
+json-server --watch cartProducts.json  //run in CMD with NgServe and Eclipse running.
+
+
+//DATA TO BE POSTED VIA POSTMAN INTO PRODUCT CONTROLLER.
+
+
+
+
+ {
+        "id": 117,
+        "product_name": "Samsung Galaxy Z Flip4 5G",
+        "product_description": "Galaxy Z Fold4's Cover Screen size is 15.73cm 6.2 in the full rectangle and 15.48cm 6.1 accounting for the rounded corners.",
+        "product_price": 154998,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile1.jpg",
+        "productCategory": {
+            "id": 118,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 119,
+        "product_name": "Samsung Galaxy Z Fold 4 5G",
+        "product_description": "Dynamic AMOLED displayPowerful camera setup on both endsQualcomm Snapdragon 8 Plus Gen 1 chipsetMassive 12GB RAM4400mAh battery compatible with 25W Fast ChargingWireless charging256GB internal storageFoldable designSidewise fingerprint sensor",
+        "product_price": 168999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile2.jpg",
+        "productCategory": {
+            "id": 120,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 121,
+        "product_name": "Blackberry Passport 3GB RAM",
+        "product_description": "Responsive QWERTY keypadPowerful configurationBrilliant camerasMassive storagePowerful battery",
+        "product_price": 25999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile3.jpg",
+        "productCategory": {
+            "id": 122,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 123,
+        "product_name": "Samsung Galaxy S22 Ultra 5G",
+        "product_description": "Dynamic AMOLED 2X display108MP Camera on the back with Laser autofocus45W Fast and Wirelessly chargeable battery512GB internal storageOn-screen Ultrasonic fingerprint sensorWater-resistant, IP68DustproofBuilt-in S Pen",
+        "product_price": 106999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile4.jpg",
+        "productCategory": {
+            "id": 124,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 125,
+        "product_name": "OnePlus 10 Pro 5G",
+        "product_description": "Massive Fluid AMOLED displayCorning Gorilla Glass Victus protection on the frontQualcomm 8 Gen 1 Chipset and 8GB RAM5000mAh battery with 80W Super VOOC Charging128GB internal storageAndroid v12 OS",
+        "product_price": 60999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile5.jpg",
+        "productCategory": {
+            "id": 126,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 127,
+        "product_name": "OnePlus Nord 2T 5G",
+        "product_description": "AMOLED displayTriple Camera combo at the rear side32MP Selfie CameraMediaTek Dimensity 1300 MT6893 chipset8GB LPDDR4X RAM80W Super VOOC Charging128GB internal storageOn-screen optical fingerprint sensor",
+        "product_price": 28999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile6.jpg",
+        "productCategory": {
+            "id": 128,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 129,
+        "product_name": "Xiaomi 12 Pro 5G",
+        "product_description": "AMOLED Display protected by Corning Gorilla Glass4600mAh battery, compatible with 120W Quick Charging v4.0Triple Cameras on the rear side32MP Front Camerav4.0 120W Hyper Charge8GB RAM and Qualcomm Snapdragon 8 Gen 1 Chipset",
+        "product_price": 59999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile7.jpg",
+        "productCategory": {
+            "id": 130,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 131,
+        "product_name": "iQOO Neo 6 5G",
+        "product_description": "120Hz E4 AMOLED Display | 1300nits Peak Brightness | 6000000:1 Contrast Ratio | SGS Eye Care Certificate | HDR 10+ | Netflix HDR 64MP OIS Main Camera with GW1P sensor, 8MP Wide Angle Camera & 2MP Macro Camera",
+        "product_price": 29999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile8.jpg",
+        "productCategory": {
+            "id": 132,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 133,
+        "product_name": "Tecno Phantom X2 Pro",
+        "product_description": "50MP F1.49 Ultra large Aperture retractable Portrait lens | 50MP ISOCELL 3.0 with 7P Lens for noise reduction | 7th Gen IMAGIQ 790 ISP with extraordinary computing power | 5th Gen AI Processor APU 590 | 32MP Selfie camera",
+        "product_price": 49999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile9.jpg",
+        "productCategory": {
+            "id": 134,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 135,
+        "product_name": "OnePlus 10R 5G",
+        "product_description": "Camera: 50MP Main Camera with Sony IMX766 and 2MP Macro Camera with Dual LED Flash; 16MP Front (Selfie) Camera with Sony IMX471 Display: 6.7 Inches; 120 Hz IRIS Display; Resolution: 2400 X 1080 pixels 394 ppi; Aspect Ratio: 20:9",
+        "product_price": 34999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile10.jpg",
+        "productCategory": {
+            "id": 136,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 137,
+        "product_name": "Apple iPhone 14 Pro",
+        "product_description": "17.00 cm (6.7-inch) Super Retina XDR display featuring Always-On and ProMotionDynamic Island, a magical new way to interact with iPhone 48MP Main camera for up to 4x greater resolution Cinematic mode now in 4K Dolby Vision up to 30 fps",
+        "product_price": 132999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile11.jpg",
+        "productCategory": {
+            "id": 138,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 139,
+        "product_name": "Samsung Galaxy S20 FE 5G",
+        "product_description": "Triple Rear Camera Setup - 12MP (Dual Pixel) OIS F1.8 Wide Rear Camera + 8MP OIS Tele Camera + 12MP Ultra Wide | 30X Space Zoom, Single Take & Night Mode | 32MP F2.2 Front Punch Hole Camera",
+        "product_price": 34990,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile12.jpg",
+        "productCategory": {
+            "id": 140,
+            "category_name": "Smartphone"
+        }
+    },
+    {
+        "id": 149,
+        "product_name": "Apple Watch Ultra",
+        "product_description": "42 mm Dial",
+        "product_price": 75000,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/watch1.jpg",
+        "productCategory": {
+            "id": 150,
+            "category_name": "SmartWatch"
+        }
+    },
+    {
+        "id": 154,
+        "product_name": "Samsung Galaxy S23 Plus 5G",
+        "product_description": "Power for those who don't pause - Your quest for epic mobile gaming is over. Snapdragon 8 Gen 2 Mobile Platform for Galaxy optimizes and streamlines your device for silky smooth games —without draining the battery.",
+        "product_price": 79999,
+        "product_stock_quantity": 10,
+        "product_image_url": "/assets/image/mobile13.jpg",
+        "productCategory": {
+            "id": 155,
+            "category_name": "Smartphone"
+        }
+    }
+]
