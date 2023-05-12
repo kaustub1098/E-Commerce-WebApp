@@ -1,0 +1,88 @@
+.horizontal-timeline .items {
+    border-top: 2px solid #ddd;
+    } 
+    
+    .horizontal-timeline .items .items-list {
+    position: relative;
+    margin-right: 0;
+    } 
+    
+    .horizontal-timeline .items .items-list:before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+    top: 0;
+    margin-top: -5px;
+    } 
+    
+    .horizontal-timeline .items .items-list {
+    padding-top: 15px;
+    } 
+
+
+
+    img {
+        border: 1px solid rgb(123, 164, 196);
+      }
+    
+    
+      .main-div{
+        border: 1px solid rgb(1, 12, 14) ;
+      }
+    
+    
+      .nav {
+    
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .nav h3 {
+        color: white;
+        margin: 0;
+        font-size: 40px;
+    }
+     
+    .nav ul {
+        display: inline-flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav li {
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    
+    .nav li a {
+        text-decoration: none;
+        color:white;
+    }
+    
+    .nav .nav-search {
+        margin-top: 5px;
+        flex: 1;
+        display: flex;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .nav .nav-search input {
+        flex: 1;
+        color: white;
+        border: 1px solid blueviolet;
+        height: 39px;
+        border-right: 0px;
+    }
+    
+    .nav .nav-search button {
+        color: blueviolet;
+        border: 1px solid blueviolet;
+        height: 39px;
+        border-left: 0px;   
+    }

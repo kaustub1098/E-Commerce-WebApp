@@ -1,0 +1,103 @@
+ <!-----------------------------------------------Header----------------------------------->
+
+<nav class="nav" >
+  <h3><a routerLink="/home">E-commerce</a></h3>
+  <!-- <div class="nav-search">
+      <input  class="form-control mt-2" 
+      type="text" placeholder="search for Products">
+  </div> -->
+  <ul>
+    <li style="padding-right: 25px;"><a  routerLink="/home"><svg
+      xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-fill"
+      viewBox="0 0 16 16">
+      <path
+        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+      <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+    </svg></a></li>
+   
+
+      <li style="padding-right: 25px;"><a routerLink="/cart"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+      </svg></a></li> 
+
+
+      <li style="padding-right: 25px;" ><a routerLink="/order"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+        <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+        <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+      </svg></a></li>
+  </ul>
+</nav>
+
+<!-----------------------------------------------Header----------------------------------->
+
+
+<section class="vh-100" style="background-color: #f4f5f7;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;">
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="assets/image/rohan.png"
+                  alt="" class="img-fluid my-5" style="width: 80px;" />
+                <h5>{{userDetail[0]?.user_firstName}}  {{userDetail[0]?.user_lastName}}</h5>
+                <p>Trainee Software Engineer</p>
+                <i class="far fa-edit mb-5"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Email</h6>
+                      <p class="text-muted">{{userDetail[0]?.user_emailid}}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Phone</h6>
+                      <p class="text-muted">{{userDetail[0]?.user_phoneNumber}}</p>
+                    </div>
+                  </div>
+                  <h6>Most Viewed category</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <!-- <h6>Recent</h6> -->
+                      <p class="text-muted" type="password">Electronics</p>
+                    </div>
+                    <!-- <div class="col-6 mb-3">
+                      <h6>Most Viewed</h6>
+                      <p class="text-muted">Dolor sit amet</p>
+                    </div> -->
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- <div class="card"  style="width: 400px; margin-left: 550px; margin-top: 50px;">
+    <img class="card-img-top" style="height:200px; width: 200px; padding-left: 20px;" src="/assets/image/user.png" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title" style="color: blue;">{{userDetail[0].user_firstName}} {{userDetail[0].user_lastName}}</h4>
+      <p>{{userDetail[0].user_address}}</p>
+      <p>{{userDetail[0].user_emailid}}</p>
+      <p >{{userDetail[0].user_password}}</p>
+      <p>{{userDetail[0].user_phoneNumber}}</p>
+    
+       
+    </div>
+  </div>  -->

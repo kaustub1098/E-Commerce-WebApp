@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "id": 10000001,
+      "productName": "Redmi Mobile",
+      "productDescription": "A device for connecting ",
+      "productPrice": "20000",
+      "productImage": "/assets/mobile.png",
+      "productStockQuantity": "10",
+      "categoryId": "12345",
+      "discountId": "23454",
+      "orderId": "324w652t"
+    },
+    {
+      "id": 10000002,
+      "productName": "lenovo laptop",
+      "productDescription": "A wireless product",
+      "productPrice": "70000",
+      "productImage": "/assets/laptop.png",
+      "productStockQuantity": "10",
+      "categoryId": "12346",
+      "discountId": "23446",
+      "orderId": "45537g677"
+    },
+    {
+      "productId": 10,
+      "productName": "Redmi Mobile",
+      "productDescription": "A device for connecting ",
+      "productPrice": "20000",
+      "productImage": "/assets/mobile.png",
+      "productStockQuantity": "10",
+      "categoryId": "12345",
+      "discountId": "23454",
+      "orderId": "324w652t",
+      "id": 10000003
+    }
+  ]
+}

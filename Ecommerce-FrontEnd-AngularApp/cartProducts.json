@@ -1,0 +1,40 @@
+{
+  "cartProducts": [
+    {
+      "id": 127,
+      "product_name": "OnePlus Nord 2T 5G",
+      "product_description": "AMOLED displayTriple Camera combo at the rear side32MP Selfie CameraMediaTek Dimensity 1300 MT6893 chipset8GB LPDDR4X RAM80W Super VOOC Charging128GB internal storageOn-screen optical fingerprint sensor",
+      "product_price": 28999,
+      "product_stock_quantity": 10,
+      "product_image_url": "/assets/image/mobile6.jpg",
+      "productCategory": {
+        "id": 128,
+        "category_name": "Smartphone"
+      }
+    },
+    {
+      "id": 119,
+      "product_name": "Samsung Galaxy Z Fold 4 5G",
+      "product_description": "Dynamic AMOLED displayPowerful camera setup on both endsQualcomm Snapdragon 8 Plus Gen 1 chipsetMassive 12GB RAM4400mAh battery compatible with 25W Fast ChargingWireless charging256GB internal storageFoldable designSidewise fingerprint sensor",
+      "product_price": 168999,
+      "product_stock_quantity": 10,
+      "product_image_url": "/assets/image/mobile2.jpg",
+      "productCategory": {
+        "id": 120,
+        "category_name": "Smartphone"
+      }
+    },
+    {
+      "id": 121,
+      "product_name": "Blackberry Passport 3GB RAM",
+      "product_description": "Responsive QWERTY keypadPowerful configurationBrilliant camerasMassive storagePowerful battery",
+      "product_price": 25999,
+      "product_stock_quantity": 10,
+      "product_image_url": "/assets/image/mobile3.jpg",
+      "productCategory": {
+        "id": 122,
+        "category_name": "Smartphone"
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+
+<!-- ******************************HEADER**************************************** -->
+<nav class="nav">
+  <h3><a routerLink="/home">E-commerce</a></h3>
+  <!-- <div class="nav-search">
+    <input class="form-control mt-2" type="text" placeholder="search for Products">
+  </div> -->
+  <ul>
+    <li style="padding-right: 25px;"><a routerLink="/home"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+          height="30" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+          <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+          <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+        </svg></a></li>
+    <li style="padding-right: 25px;"><a routerLink="/user"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+          height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg></a></li>
+
+    <li style="padding-right: 25px;"><a routerLink="/cart"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+          height="30" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+          <path
+            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+        </svg></a></li>
+  </ul>
+</nav>
+<!-- ******************************HEADER**************************************** -->
+
+<blockquote class="blockquote" style="text-align: center; font-size:xx-large;">Order History</blockquote>
+
+<section class="h-100 h-custom" style="background-color: #eee;">
+    <div class="container py-5 h-100"  *ngFor="let order of allorders ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card border-top border-bottom border-3" style="border-color: #f37a27 !important;">
+            <div class="card-body p-5" >
+  
+              <p class="lead fw-bold mb-5" style="color: #f37a27;">Order Reciept</p>
+  
+              <div class="row">
+              
+                <div class="col mb-3" style="margin-left: 50px;">
+                  <p class="small text-muted mb-1">Date</p>
+                  <p> {{order.order_Date}}</p>
+                </div>
+                <div class="col mb-3">
+                  <p class="small text-muted mb-1">Time</p>
+                  <p>{{order.order_Time}}</p>
+                </div>
+              </div>
+  
+              <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                <div class="row">
+                  <div >
+                    <h6><b>Product Ordered</b></h6>
+                    <p>{{order.products.product_name}}</p>
+                  </div>
+                  <div >
+                    <h6><b>Product Price</b></h6>
+                    <p>{{order.products.product_price}}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 col-lg-9">
+                    <!-- <p class="mb-0">Shipping</p> -->
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                    <!-- <p class="mb-0">£33.00</p> -->
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row my-4">
+                <div >
+                  <p class="lead fw-bold mb-0" style="color: #f37a27;">Order Total - {{order.products.product_price}}</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+          
+          
+          
+          
+          
+          
+          
+          
+          <!-- <body>
+              <h2>Order History</h2>
+              <div class="py-5" *ngFor="let order of allorders ">
+                <div class="container" >
+                  <div class="row hidden-md-up" >
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-block" >
+                          <h4 class="card-title">Order id - {{order.id}}</h4>
+                          <h6 class="card-subtitle text-muted">Order date - {{order.order_Date}}</h6>
+                          <h6 class="card-subtitle text-muted">Order time - {{order.order_Time}}</h6>
+  
+                          
+                          <p class="card-text p-y-1">Payment Type - {{order.payment_type}}</p>
+                          <p class="card-text p-y-1">Payment Type - {{order.payment_type}}</p>
+                          <p class="card-text p-y-1">Payment Type - {{order.payment_type}}</p>
+                          <a href="#" class="card-link">Ordered Items - </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+              <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+            </body> -->

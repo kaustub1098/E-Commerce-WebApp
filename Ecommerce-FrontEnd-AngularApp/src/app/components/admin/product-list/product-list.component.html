@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of allproduct" >
+        <td><img src="{{product.product_image_url}}"  style="height: 50px;"></td>
+        <td>{{product.product_name}}</td>
+        <td>{{product.product_price}}</td>
+        <td><button class="btn btn-danger" (click)="onClickDelete(product.product_name)">Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>

@@ -1,0 +1,91 @@
+<!-- ************************************Header************************************* -->
+
+<nav class="nav">
+  <h3>E-commerce</h3>
+
+  <div class="nav-search">
+    <input class="form-control mt-2" type="text" placeholder="search for Products" name="filterText"
+      [(ngModel)]="filterText" />
+
+  </div>
+  <ul>
+    
+    <li style="padding-right: 25px;"><a class="button button1" href="index.php" routerLink="/user"><svg
+          xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle"
+          viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path fill-rule="evenodd"
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg></a></li>
+    <li style="padding-right: 25px;"><a class="button button1" routerLink="/cart"><svg
+          xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-check-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+        </svg></a></li>
+
+      <li style="padding-right: 25px;" ><a routerLink="/order"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list-task" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+        <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+        <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+      </svg></a></li>
+  </ul>
+
+
+</nav>
+<!-- ************************************Header************************************* -->
+
+<!-- <form>
+  <div class="form-group">
+    <label for="filterText">Filter on title or genre:</label>
+    <input
+    placeholder="Search product"
+      class="form-control mt-2"
+      type="text"
+      name="filterText"
+    [(ngModel)]="filterText"
+    style="width: 550px; text-align: center;"
+    />
+  </div>
+</form> -->
+
+
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="card" *ngFor="let product of allproduct | productFilter:filterText" style="height: 390px; width: 350px; margin-left: 17px; " >
+      <div class="image">
+        <img src="{{product.product_image_url}}" alt="" style="width: 200px; height: 250px" />
+      </div>
+      <div class="container">
+        <h6 style="color:rgb(76, 43, 219)"><b>{{product.product_name}}</b></h6>
+        <p class="card-price" style="color: black;">₹{{product.product_price}}</p>
+        <!-- <p class="card-price" style="color: black;">₹{{product.productCategory.category_name}}</p> -->
+        
+        <!-- <p class="card-description">
+          {{product.product_description}}
+        </p> -->
+
+      </div>
+      <div>
+        <button type="button" (click)="addToCart(product)" class="btn btn-primary" style="width: 150px; margin-left: 40px;"><svg 
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+        </svg>Add To Cart
+        </button>
+
+        <a href="http://localhost:4200/productDetails/{{product.product_name}}" class="btn btn-danger" style="padding-left: 30px; padding-right: 30px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+   

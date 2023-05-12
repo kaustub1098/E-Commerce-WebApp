@@ -1,0 +1,80 @@
+<div class="col-md-4">
+    <h1>Add New Product:</h1>
+    <form #submitForm="ngForm" class="form" (ngSubmit)="formSubmit()">
+
+        <hr>
+        <div class="form-group">
+            <label for="product_name">Product Name</label>
+            <input type="text" class="form-control" id="product_name" required pattern="[a-zA-Z][a-zA-Z ]+"
+                [(ngModel)]="productInput.product_name" name="product_name" #product_name="ngModel">
+            <div [hidden]="product_name.valid || product_name.pristine" class="alert alert-danger">
+                <div [hidden]="!product_name.hasError('required')">Name is required</div>
+                <div [hidden]="!product_name.hasError('pattern')">Only alphabets allowed</div>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <label>Product Description</label>
+        <div>
+            <input class="form-control" type="text" required name="product_description" #product_description="ngModel"
+                [(ngModel)]="productInput.product_description">
+            <div class="alert alert-danger" *ngIf="product_description.invalid && product_description.touched">Product
+                Description</div>
+        </div>
+        <hr>
+
+        <div class="form-group">
+            <label for="product_price">Product price</label>
+            <input type="text" class="form-control" id="product_price" required [(ngModel)]="productInput.product_price"
+                name="product_price" pattern="[0-9]*" minlength="3" maxlength="6" #product_price="ngModel">
+            <div [hidden]="product_price.valid || product_price.pristine" class="alert alert-danger">
+                <div [hidden]="!product_price.hasError('minlength')">product price should be 3 digit</div>
+                <div [hidden]="!product_price.hasError('required')">product price is required</div>
+                <div [hidden]="!product_price.hasError('pattern')">product price should be only numbers</div>
+            </div>
+        </div>
+
+       <hr>
+
+        <div class="form-group">
+            <label for="product_stock_quantity">Product stock quantity</label>
+            <input type="text" class="form-control" id="product_stock_quantity" required
+                [(ngModel)]="productInput.product_stock_quantity" name="product_stock_quantity" pattern="[0-9]*"
+                minlength="1" maxlength="6" #product_stock_quantity="ngModel">
+            <div [hidden]="product_stock_quantity.valid || product_stock_quantity.pristine" class="alert alert-danger">
+                <div [hidden]="!product_stock_quantity.hasError('minlength')">Stock quantity should be 1 digit</div>
+                <div [hidden]="!product_stock_quantity.hasError('required')">stock quantity is required</div>
+                <div [hidden]="!product_stock_quantity.hasError('pattern')">Stock quantity should be only numbers</div>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <label>product_image_url</label>
+        <div>
+            <input class="form-control" type="text" required name="product_image_url" #product_image_url="ngModel"
+                [(ngModel)]="productInput.product_image_url">
+            <div class="alert alert-danger" *ngIf="product_image_url.invalid && product_image_url.touched">Product image
+                url</div>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="category_name">category Name</label>
+            <input type="text" class="form-control" id="category_name" required pattern="[a-zA-Z][a-zA-Z ]+"
+                [(ngModel)]="tempProductCategory" name="category_name" #category_name="ngModel">
+            <div [hidden]="category_name.valid || category_name.pristine" class="alert alert-danger">
+                <div [hidden]="!category_name.hasError('required')">Name is required</div>
+                <div [hidden]="!category_name.hasError('pattern')">Only alphabets allowed</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <button type="submit" class="btn btn-success">Add</button>
+
+    </form>
+</div>
